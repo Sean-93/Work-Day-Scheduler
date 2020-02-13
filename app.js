@@ -17,14 +17,23 @@ $(document).ready(function() {
     function hourUpdater() {
         //sets variable to be current hour
         var currentHour = moment().hours();
+        //selects all elements with .time-block id
+        //creates a function that catches all elements with .time-block id
         $(".time-block").each(function() {
+            //sets variable that splits each "hour-_" id by the "-" into 2 strings
+            //converts the second string into an integer "this" references the id
             var blockHour = parseInt($(this).attr("id").split("-")[1]);
+            //if blockHour is less than currentHour, select element and add the .past class
             if(blockHour < currentHour) {
                 $(this).addClass("past")
             }
+            //else if blockHour is same value as currentHour, remove .past class
+            //after removing class, add the .present class onto the element
             else if(blockHour === currentHour) {
                 $(this).removeClass("past")
                 $(this).addClass("present")
+            //if blockHour is neither less than or equal to currentHour, 
+            //remove .past and .present from element; add class, .future
             }
             else {
                 $(this).removeClass("past")
@@ -34,8 +43,10 @@ $(document).ready(function() {
         })
     }
 
+    //run function
     hourUpdater();
 
+    //sets an intervals
     var interval = setInterval(hourUpdater, 15000);
 
     //DRY version VVV
