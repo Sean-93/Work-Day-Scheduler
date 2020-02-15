@@ -46,7 +46,7 @@ $(document).ready(function() {
     //run function
     hourUpdater();
 
-    //sets an intervals
+    //sets an interval to run hourUpdater every 15 minutes
     var interval = setInterval(hourUpdater, 15000);
 
     //DRY version VVV
