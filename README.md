@@ -6,3 +6,5 @@ This is the first Jquery assignment.
 ## You can save notes with local storage for each of the time slots.
 
 #### This was made with HTML, CSS, Javascript, and Jquery.  Some styles came from Bootstrap, and some of the code originated from Moment.JS.
+
+#### Here is the link to view the page: https://sean-93.github.io/Work-Day-Scheduler/
